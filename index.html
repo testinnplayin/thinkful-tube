@@ -9,7 +9,6 @@
 	<title>Thinkful Tube | A YouTube Movie Search Tool</title>
 	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="styles/main.css" />
 </head>
 <body>
@@ -47,16 +46,34 @@
 		</section>
 		<section class="gallery">
 			<div class="container">
-				<div></div>
+				<div class="row">
+					<div class="col-xs-6 col-md-4">
+					<!-- this is the full one that should be chosen -->
+						<a class="thumbnail" href="#"><img class="img-responsive img-thumbnail" alt="fingers with black marker smilies" src="http://static.bigstockphoto.com/images/homepage/2016_bigstock_picks.jpg" target="_blank" /></a> 
+					</div>
+					<div class="col-xs-4">
+						<a class="thumbnail" href="#"><img class="img-responsive img-thumbnail" src="https://www.sitebuilderreport.com/assets/facebook-stock-up-08c6c9a855df26a3b13a34ac62bb75cc.jpg" /></a>
+					</div>
+					<div class="col-xs-4">
+						<a class="thumbnail" href="#"><img class="img-responsive img-thumbnail" src="http://www.stockfreeimages.com/static/homepage/light-bulb-free-stock-photo-8249013.jpg" /></a>
+					</div>
+					<div class="col-xs-4">
+						<a class="thumbnail" href="#"><img class="img-responsive img-thumbnail" src="http://img05.deviantart.net/e062/i/2012/337/7/0/sheep_stock_06_by_jaded_night_stock-d5mxug7.jpg"></a>
+					</div>
+				</div>
 
 			</div>
 		</section>
 	</main>
 
+	<footer>
+		<p>Powered by <a href="youtube.com">YouTube</a></p>
+	</footer>
 
 	<!-- SCRIPTS -->
 	<!-- libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- custom -->
     <script src="scripts/app.js"></script>
 </body>
