@@ -5,7 +5,7 @@
 	<meta name="description" content="A YouTube movie search tool" />
 	<meta name="author" content="R. Wood" />
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>Thinkful Tube | A YouTube Movie Search Tool</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles/main.css" />
@@ -23,8 +23,8 @@
 			<div class="container">
 				<div class="next-last-pages">
 					<ul class="nav">
-						<li role="presentation"><a href="#" class="btn btn-default" role="button">Next Page</a></li>
-						<li role="presentation"><a href="#" class="btn btn-default" role="button">Last Page</a></li>
+						<li role="presentation"><a href="#" class="btn btn-default nav-btn" role="button">Next Page</a></li>
+						<li role="presentation"><a href="#" class="btn btn-default nav-btn" role="button">Last Page</a></li>
 					</ul>
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 		</section>
 		<section class="search-box">
 			<div class="container">
-				<form class="form-inline">
+				<form class="form-inline search-form">
 					<div class="form-group">
 						<label class="sr-only" for="search-term">Search Box</label>
 						<input type="text" class="form-control" id="search-term" placeholder="Search term" />
@@ -46,18 +46,18 @@
 		<section class="gallery">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-6 col-md-4">
+					<div class="col-xs-12 col-md-6 col-lg-4">
 					<!-- this is the full one that should be chosen -->
-						<a class="thumbnail" href="#"><img class="img-responsive" alt="fingers with black marker smilies" src="http://static.bigstockphoto.com/images/homepage/2016_bigstock_picks.jpg" target="_blank" /></a> 
+						<a class="thumbnail" href="#"><img class="img-responsive video-thumbs" alt="fingers with black marker smilies" src="http://static.bigstockphoto.com/images/homepage/2016_bigstock_picks.jpg" target="_blank" /></a> 
 					</div>
-					<div class="col-xs-4">
-						<a class="thumbnail" href="#"><img class="img-responsive" src="https://www.sitebuilderreport.com/assets/facebook-stock-up-08c6c9a855df26a3b13a34ac62bb75cc.jpg" /></a>
+					<div class="col-xs-12 col-md-6 col-lg-4">
+						<a class="thumbnail" href="#"><img class="img-responsive video-thumbs" src="https://www.sitebuilderreport.com/assets/facebook-stock-up-08c6c9a855df26a3b13a34ac62bb75cc.jpg" /></a>
 					</div>
-					<div class="col-xs-4">
-						<a class="thumbnail" href="#"><img class="img-responsive" src="http://www.stockfreeimages.com/static/homepage/light-bulb-free-stock-photo-8249013.jpg" /></a>
+					<div class="col-xs-12 col-md-6 col-lg-4">
+						<a class="thumbnail" href="#"><img class="img-responsive video-thumbs" src="http://www.stockfreeimages.com/static/homepage/light-bulb-free-stock-photo-8249013.jpg" /></a>
 					</div>
-					<div class="col-xs-4">
-						<a class="thumbnail" href="#"><img class="img-responsive" src="http://img05.deviantart.net/e062/i/2012/337/7/0/sheep_stock_06_by_jaded_night_stock-d5mxug7.jpg"></a>
+					<div class="col-xs-12 col-md-6 col-lg-4">
+						<a class="thumbnail" href="#"><img class="img-responsive video-thumbs" src="http://img05.deviantart.net/e062/i/2012/337/7/0/sheep_stock_06_by_jaded_night_stock-d5mxug7.jpg"></a>
 					</div>
 				</div>
 
