@@ -102,6 +102,12 @@ p {
 
 @media (min-width: 630px) {
 	
+	.navigators > .container,
+	.search-box > .container {
+		width: 100%;
+		text-align: center;
+	}
+	
 	.next-last-pages > ul {
 		display: inline-block;
 	}
@@ -127,18 +133,21 @@ p {
 
 @media (min-width: 1000px) {
 
-	.navigators > .container,
-	.search-box > .container {
-		width: 100%;
-		margin-left: 200px;
-		margin-right: 200px;
-	}
-
 	.gallery > .container {
 		width: 90%;
 	}
 
 	#search-term:focus {
 		padding-right: 600px;
+	}
+}
+
+@media (min-width: 1200px) {
+	#search-term:focus {
+		padding-width: 900px;
+	}
+
+	.row {
+		margin-left: 3px;
 	}
 }
