@@ -29,14 +29,20 @@ p {
 	margin: 15px auto;
 }
 
-.thumbnail {
-	height: auto;
-	width: 300px;
+.thumbnail,
+.search-form {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+.thumbnail {
+	height: auto;
+	width: 300px;
+	
+}
+
 .search-form {
-	margin: 20px 300px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
