@@ -18,13 +18,13 @@
 		</div>
 	</header>
 
-	<main>
+	<main class="main-content">
 		<section class="navigators">
 			<div class="container">
 				<div class="next-last-pages">
-					<ul class="nav">
-						<li role="presentation"><a href="#" class="btn btn-default nav-btn" role="button">Next Page</a></li>
-						<li role="presentation"><a href="#" class="btn btn-default nav-btn" role="button">Last Page</a></li>
+					<ul>
+						<li class="left"><a href="#" class="btn btn-default navbar-btn">Forward</a></li>
+						<li class="right"><a href="#" class="btn btn-default navbar-btn">Backward</a></li>
 					</ul>
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 		</section>
 		<section class="search-box">
 			<div class="container">
-				<form class="form-inline search-form">
+				<form class="form-inline search-form" role="search">
 					<div class="form-group">
 						<label class="sr-only" for="search-term">Search Box</label>
 						<input type="text" class="form-control" id="search-term" placeholder="Search term" />
