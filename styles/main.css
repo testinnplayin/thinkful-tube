@@ -140,13 +140,13 @@ p {
 	}
 
 	#search-term:focus {
-		padding-right: 600px;
+		padding-right: 400px;
 	}
 }
 
 @media (min-width: 1200px) {
 	#search-term:focus {
-		padding-width: 900px;
+		padding-right: 400px;
 	}
 
 	.row {

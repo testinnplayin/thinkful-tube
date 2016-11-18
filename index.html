@@ -22,12 +22,12 @@
 		
 		<section class="search-box">
 			<div class="container">
-				<form class="form-inline search-form" role="search">
-					<div class="form-group">
+				<form class="form-inline search-form js-search-form" role="search">
+					<div class="form-group js-form-group">
 						<label class="sr-only" for="search-term">Search Box</label>
-						<input type="text" class="form-control" id="search-term" placeholder="Search term" />
+						<input type="text" class="form-control" id="search-term" class="js-search-term" placeholder="Search term" />
 					</div>
-					<button type="submit" class="btn btn-default search-btn">Search</button>
+					<button type="submit" class="btn btn-default search-btn js-search-btn">Search</button>
 				</form>
 			</div>
 			<section class="navigators">
@@ -45,7 +45,9 @@
 		</section>
 		<section class="gallery">
 			<div class="container">
-				<!-- where data will be loaded -->
+				<div class="row js-row">
+					<!-- where data will be loaded -->
+				</div>
 			</div>
 		</section>
 	</main>
@@ -58,7 +60,10 @@
 
 	<!-- SCRIPTS -->
 	<!-- libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- custom -->
     <script src="scripts/app.js"></script>
