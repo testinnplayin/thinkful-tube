@@ -64,10 +64,6 @@ p {
 	
 }
 
-.thumbnail:hover {
-	border: 2px solid blue;
-}
-
 .search-form {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -78,7 +74,6 @@ p {
 }
 
 #search-term:focus {
-	padding-right: 100px;
 	box-shadow: 1px 1px 5px 5px gray inset;
 }
 
@@ -128,9 +123,6 @@ p {
 		padding-right: 150px;
 	}
 
-	#search-term:focus {
-		padding-right: 350px;
-	}
 }
 
 @media (min-width: 1000px) {
@@ -139,15 +131,9 @@ p {
 		width: 90%;
 	}
 
-	#search-term:focus {
-		padding-right: 400px;
-	}
 }
 
 @media (min-width: 1200px) {
-	#search-term:focus {
-		padding-right: 400px;
-	}
 
 	.row {
 		margin-left: 3px;

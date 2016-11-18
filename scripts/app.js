@@ -52,16 +52,38 @@ function handleAJAX(query) {
 	});
 }
 
+
+//action functions
+
+function getValue() {
+	var search = $('#search-term').val();
+	return search;
+}
+
+function doActions(e) {
+	e.preventDefault();
+	$('.js-row').empty();
+	var query = getValue();
+	console.log('The query value is ' + query);
+	handleAJAX(query);
+}
+
+
+
 //event handlers
 
 function handleSubmit() {
-	$('.js-search-form').on('click', '.js-search-btn', function(e) {
-		e.preventDefault();
 
-		var query = $('.js-form-group').find('.js-search-term').val();
-		console.log(query);
-		handleAJAX(query);
-		
+	$('.js-search-btn').click(function(e) {
+		doActions(e);	
+	});
+
+	$('#search-term').keydown(function(e) {
+		var enterKey = 13;
+
+		if (e.which === enterKey) {
+			doActions(e);
+		}
 	});
 }
 
