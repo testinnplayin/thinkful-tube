@@ -16,7 +16,7 @@ function renderThumbnails(data) {
 				+ '</div>';
 		}
 	} else {
-		result += '<div class="col-xs-12"><a href="#" class=thumbnail" title="no results"><img src="http://www.hardwickagriculture.org/blog/wp-content/uploads/placeholder.jpg" alt="placeholder>"</a></div>'
+		result += '<div class="col-xs-12"><a href="#" class="thumbnail" title="no results"><img src="http://www.hardwickagriculture.org/blog/wp-content/uploads/placeholder.jpg" alt="placeholder"></a></div>'
 	}
 
 	$('.js-row').html(result);
@@ -45,7 +45,8 @@ function handleAJAX(query) {
 	.fail(function(err) {
 		console.log("Denied!");
 		console.log(err);
-		return err;
+		var errMsg = "<p>Oops something went wrong! " + err + "</p>";
+		$('.js-row').html(errMsg);
 	})
 	.always(function() {
 		console.log("Completed");

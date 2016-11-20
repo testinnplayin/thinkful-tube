@@ -26,6 +26,10 @@ p {
 	font-weight: bold;
 }
 
+img {
+	max-height: 180px;
+}
+
 
 
 /* HEADER STYLES */
@@ -61,7 +65,6 @@ p {
 	height: auto;
 	width: 350px;
 	display: block;
-	
 }
 
 .search-form {
