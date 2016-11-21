@@ -18,6 +18,11 @@ var lightboxTemplate = (
 
 //display functions
 
+function displayLightbox(address) {
+	$('body').append(lightboxTemplate);
+	$('.modal-body').find('iframe').attr('src', address);	
+}
+
 function renderThumbnails(data) {
 	var result = '';
 	var lng = data.items.length;
@@ -27,8 +32,8 @@ function renderThumbnails(data) {
 
 		for (var i = 0; i < lng; i++) {
 			result += '<div class="col-xs-12 col-md-6 col-lg-4">'
-				+ '<a class="thumbnail js-trigger" data-toggle="modal" data-target="#lightbox" href="#" title="' 
-				+ data.items[i].snippet.title + '" value="' + data.items[i].id.videoId + '">'
+				+ '<a class="thumbnail js-trigger" data-toggle="modal" data-target="#lightbox" href="https://www.youtube.com/embed/' + data.items[i].id.videoId + '?autoplay=1&controls=2" title="' 
+				+ data.items[i].snippet.title + '">'
 				+ '<img class="img-responsive video-thumbs" src="' + data.items[i].snippet.thumbnails.medium.url + '" alt="image of video"></a>'
 				+ '</div>';
 		}
@@ -95,15 +100,14 @@ function doActions(e) {
 //event handlers
 
 function handleLightboxEvent() {
-	
+	$('body').on('click', '.js-trigger', function(e) {
+		e.stopPropagation();
 
-	$('.js-trigger').click(function() {
-		var address = $(this).val();
-		console.log(address);
+		var address = $('.js-trigger').attr('href');
 
-		var embedURL = "https://www.youtube.com/embed/" + address + "?autoplay=0&controls=2";
-
+		displayLightbox(address);
 	});
+	
 }
 
 function handleSubmit() {
