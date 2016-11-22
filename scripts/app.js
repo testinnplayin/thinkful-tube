@@ -1,27 +1,6 @@
 var endpoint = 'https://www.googleapis.com/youtube/v3/search';
-var embedURL = 'https://www.youtube.com/embed/';
-
-var lightboxTemplate = (
-		'<div id="lightbox" class="modal fade" tabindex="-1" role="dialog">'
-			+ '<div class="modal-dialog">'
-				+ '<div class="modal-content">'
-					+ '<div class="modal-header">'
-						+ '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>'
-					+ '</div>'
-					+ '<div class="modal-body">' + 
-						+ '<iframe height="315" width="560" src="#" allowfullscreen></iframe>'
-					+ '</div>'
-				+ '</div>'
-			+ '</div>'
-		+ '</div>'
-);
 
 //display functions
-
-function displayLightbox(address) {
-	$('body').append(lightboxTemplate);
-	$('.modal-body').find('iframe').attr('src', address);	
-}
 
 function renderThumbnails(data) {
 	var result = '';
@@ -32,10 +11,10 @@ function renderThumbnails(data) {
 
 		for (var i = 0; i < lng; i++) {
 			result += '<div class="col-xs-12 col-md-6 col-lg-4">'
-				+ '<a class="thumbnail js-trigger" data-toggle="modal" data-target="#lightbox" href="https://www.youtube.com/embed/' + data.items[i].id.videoId + '?autoplay=1&controls=2" title="' 
-				+ data.items[i].snippet.title + '">'
-				+ '<img class="img-responsive video-thumbs" src="' + data.items[i].snippet.thumbnails.medium.url + '" alt="image of video"></a>'
-				+ '</div>';
+						+ '<a class="thumbnail js-trigger" data-toggle="modal" data-target="#lightbox" href="https://www.youtube.com/embed/' + data.items[i].id.videoId + '?autoplay=0&controls=2" title="' 
+						+ data.items[i].snippet.title + '">'
+						+ '<img class="img-responsive video-thumbs" src="' + data.items[i].snippet.thumbnails.medium.url + '" alt="image of video"></a>'
+					+ '</div>';
 		}
 	} else {
 		result += '<div class="col-xs-12">'
@@ -44,6 +23,17 @@ function renderThumbnails(data) {
 	}
 
 	$('.js-row').html(result);
+}
+
+function displayIframe(address) {
+	var iFrame = '<iframe height="315" width="560" src="' + address + '" frameborder="0" allowfullscreen></iframe>';
+
+	return iFrame;
+}
+
+function renderLightbox(address) {
+	$('.js-lightbox').css('display', 'block');
+	$('.js-lb-content .js-video-wrapper').html(address);
 }
 
 //AJAX call function
@@ -99,13 +89,25 @@ function doActions(e) {
 
 //event handlers
 
+function handleClose() {
+	$('js-lb-close').click(function() {
+		$('.js-lightbox').css('display', 'none');
+		$('.js-lightbox .js-video-wrapper').html('');
+	});
+}
+
 function handleLightboxEvent() {
 	$('body').on('click', '.js-trigger', function(e) {
-		e.stopPropagation();
+		e.preventDefault();
 
-		var address = $('.js-trigger').attr('href');
+		console.log("Lightbox trigger started");
+		
+		var address = displayIframe($(this).attr('href'));//this refers to the js-trigger clicked because of the .on delegation
+		console.log(address);
 
-		displayLightbox(address);
+		renderLightbox(address);
+
+		handleClose();
 	});
 	
 }
