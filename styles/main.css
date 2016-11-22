@@ -62,21 +62,25 @@ img {
 	background-color: #ccc;
 	border: 1px solid #000;
 	border-radius: 5px;
-	margin: 10px;
-	width: 30%;
+	margin: 10px auto;
+}
+
+.image-panel:hover {
+	border: 1px solid blue;
 }
 
 .thumbnail,
 .search-form {
-
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .thumbnail {
 	height: auto;
-	width: 350px;
+	width: 95%;
 	display: block;
+	background-color: transparent;
+	border: 0;
 }
 
 .search-form {
@@ -145,6 +149,13 @@ img {
 	.gallery > .container {
 		width: 90%;
 	}
+
+	.image-panel {
+		width: 30%;
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+
 
 }
 
