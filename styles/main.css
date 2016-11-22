@@ -4,6 +4,10 @@ html {
 	box-sizing: border-box;
 }
 
+body, html {
+	height: 100%;
+}
+
 *,
 *::before,
 *::after {
@@ -24,6 +28,10 @@ p {
 	text-align: center;
 	color: red;
 	font-weight: bold;
+}
+
+img {
+	max-height: 180px;
 }
 
 
@@ -61,7 +69,6 @@ p {
 	height: auto;
 	width: 350px;
 	display: block;
-	
 }
 
 .search-form {
