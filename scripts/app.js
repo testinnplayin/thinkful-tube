@@ -90,9 +90,10 @@ function doActions(e) {
 //event handlers
 
 function handleClose() {
-	$('js-lb-close').click(function() {
+	$('.js-lb-close').click(function() {
+		console.log("close event triggered");
 		$('.js-lightbox').css('display', 'none');
-		$('.js-lightbox .js-video-wrapper').html('');
+		$('.js-lb-content .js-video-wrapper').html('');
 	});
 }
 
