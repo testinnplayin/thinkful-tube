@@ -10,8 +10,8 @@ function renderThumbnails(data) {
 		var result = '';
 
 		for (var i = 0; i < lng; i++) {
-			result += '<div class="col-xs-12 col-md-6 col-lg-4">'
-						+ '<a class="thumbnail js-trigger" data-toggle="modal" data-target="#lightbox" href="https://www.youtube.com/embed/' + data.items[i].id.videoId + '?autoplay=0&controls=2" title="' 
+			result += '<div class="col-xs-12 col-md-6 col-lg-4 image-panel">'
+						+ '<a class="thumbnail js-trigger" href="https://www.youtube.com/embed/' + data.items[i].id.videoId + '?autoplay=0&controls=2" title="' 
 						+ data.items[i].snippet.title + '">'
 						+ '<img class="img-responsive video-thumbs" src="' + data.items[i].snippet.thumbnails.medium.url + '" alt="image of video"></a>'
 						+ '<p><a class="channel-address" href="https://www.youtube.com/channel/' + data.items[i].snippet.channelId + '">' + data.items[i].snippet.channelTitle + '</a></p>'
